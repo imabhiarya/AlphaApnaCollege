@@ -20,11 +20,16 @@ public class ArraysJava {
     // Largest Number in Array
     public static int largestNum(int[] arr){
         int maxVal = Integer.MIN_VALUE; // - infinity
+        int minVal = Integer.MAX_VALUE; // + infinity
         for (int i = 0; i < arr.length; i++) {
             if (maxVal < arr[i]) {
                 maxVal = arr[i];
             }
+            if (minVal> arr[i]) {
+                minVal = arr[i];
+            }
         }
+        System.out.println("Min Val : " + minVal);
         return maxVal;
     }
     public static void main(String[] args) {
