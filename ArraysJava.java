@@ -50,6 +50,20 @@ public class ArraysJava {
         }
         return -1;
     }
+    // Reverse the Array
+    public static void reverseArray(int[] arr){
+     int first = 0;
+     int last = arr.length -1;
+     while (first < last) {
+        //swap
+        int temp = arr[last];
+        arr[last] = arr[first];
+        arr[first] = temp;
+
+        first++;
+        last--;
+     }   
+    }
     public static void main(String[] args) {
         // Arrays
         // int marks[] = new int[4];
@@ -74,12 +88,21 @@ public class ArraysJava {
         } 
         // Binary Search
         {
-            int[] myArr = {1,2,3,4,5,6,7,8,9,11,34,55,65,66,87,98};
-            int val = binarySearch(myArr, 87);
-            if (val>=0) {
-                System.out.println("Index is " + val +" and Value is " + myArr[val]);
-            } else{
-                System.out.println("Not Found");
+            // int[] myArr = {1,2,3,4,5,6,7,8,9,11,34,55,65,66,87,98};
+            // int val = binarySearch(myArr, 87);
+            // if (val>=0) {
+            //     System.out.println("Index is " + val +" and Value is " + myArr[val]);
+            // } else{
+            //     System.out.println("Not Found");
+            // }
+        }
+        // Reverse an Array
+        {
+            int[] myArr = {2,4,6,8,9};
+            reverseArray(myArr);
+            // --->  print
+            for (int i = 0; i < myArr.length; i++) {
+                System.out.print(myArr[i] + " ");
             }
         }
     
