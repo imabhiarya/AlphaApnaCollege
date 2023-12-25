@@ -32,6 +32,24 @@ public class ArraysJava {
         System.out.println("Min Val : " + minVal);
         return maxVal;
     }
+    // Binary Search using Iterative
+    public static int binarySearch(int[] arr, int key){
+        int start = 0;
+        int end = arr.length -1;
+        while (start <= end) {
+            int mid = (start + end)/2;
+            if (arr[mid] == key) {
+                return mid;
+            }
+            else if (key > arr[mid]) {
+                start = mid + 1;
+            }
+            else {
+                end = mid -1;
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         // Arrays
         // int marks[] = new int[4];
@@ -51,9 +69,20 @@ public class ArraysJava {
 
         // --> Largest Number in an Array;
         {
-            int number[] = {1,4,5,6,78,9,5,45,5,7,68,565,4};
-            System.out.println("Largest Number in the Given Array is : "+largestNum(number));
+            // int number[] = {1,4,5,6,78,9,5,45,5,7,68,565,4};
+            // System.out.println("Largest Number in the Given Array is : "+largestNum(number));
         } 
+        // Binary Search
+        {
+            int[] myArr = {1,2,3,4,5,6,7,8,9,11,34,55,65,66,87,98};
+            int val = binarySearch(myArr, 87);
+            if (val>=0) {
+                System.out.println("Index is " + val +" and Value is " + myArr[val]);
+            } else{
+                System.out.println("Not Found");
+            }
+        }
+    
 
     }
 }
