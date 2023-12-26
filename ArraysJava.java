@@ -64,6 +64,19 @@ public class ArraysJava {
         last--;
      }   
     }
+    // Pairs in Array
+    public static void pairInArray(int[] arr){
+        int totalPairs = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int current = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                System.out.print("(" + current + "," + arr[j] + ") ");
+                totalPairs++;
+            }
+            System.out.println();
+        }
+        System.out.println("Total Pairs = " + totalPairs);
+    }
     public static void main(String[] args) {
         // Arrays
         // int marks[] = new int[4];
@@ -98,12 +111,17 @@ public class ArraysJava {
         }
         // Reverse an Array
         {
-            int[] myArr = {2,4,6,8,9};
-            reverseArray(myArr);
-            // --->  print
-            for (int i = 0; i < myArr.length; i++) {
-                System.out.print(myArr[i] + " ");
-            }
+            // int[] myArr = {2,4,6,8,9};
+            // reverseArray(myArr);
+            // // --->  print
+            // for (int i = 0; i < myArr.length; i++) {
+            //     System.out.print(myArr[i] + " ");
+            // }
+        }
+        // --> Pairs in array
+        {
+            int[] myArr = {1,2,3,4,5};
+            pairInArray(myArr);
         }
     
 
